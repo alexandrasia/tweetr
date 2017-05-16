@@ -1,0 +1,27 @@
+.new-tweet {
+  border: 1px solid #d3d3d3;
+  background-color: #eee;
+  padding: 0px 8px 8px 8px;
+  border-radius: 8px;
+}
+
+h2 {
+  border-bottom: 1px solid #000;
+  text-align: left;
+  margin-top: 8px;
+}
+
+textarea {
+  padding: 5px;
+  width: 100%;
+}
+
+.counter {
+  float: right;
+  font-style: italic;
+  font-size: 85%;
+}
+
+.redMax {
+  color: red;
+}
