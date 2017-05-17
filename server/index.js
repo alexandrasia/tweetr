@@ -30,7 +30,7 @@ const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 app.use("/tweets", tweetsRoutes);
 
 // app.post("/", (req, res) => {
-
+//   res.send(req.body);
 // })
 
 
