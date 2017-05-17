@@ -24,3 +24,20 @@
   line-height: 80px;
   padding-left: 10px;
 }
+
+button {
+  float: right;
+  height: 56px;
+  width: 96px;
+  margin-top: 12px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  background-color: white;
+  color: #00a087;
+  opacity: 0.9;
+}
+
+button:hover {
+  color: black;
+  opacity: 1;
+}
