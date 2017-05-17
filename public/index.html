@@ -19,8 +19,7 @@
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/app.js"></script>
+
 
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
@@ -36,30 +35,22 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
 
-    <section class="new-tweet">
-      <h2>Compose Tweet</h2>
-      <form action="/tweets" method="POST">
-        <textarea name="text" placeholder="What are you humming about?"></textarea>
-        <input type="submit" value="Tweet">
-        <span class="counter">140</span>
-      </form>
-    </section>
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form action="/tweets" method="POST">
+          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </form>
+      </section>
 
-    <section id="tweets">
-      <article>
-        <header>
-          <h2>Bill Fields</h2>
-          <img src="/images/bill.jpg" height="80px" width="80px">
-          <p>@Mr Fields</p>
-        </header>
-        <p>Little tweet will go here when this works.</p>
-        <p>10 days ago</p>
+      <section id="tweets">
 
-      </article>
-    </section>
-
-
+      </section>
     </main>
+
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/app.js"></script>
 
   </body>
 </html>

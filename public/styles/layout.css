@@ -34,14 +34,62 @@ body {
  */
 
  #tweets {
-  border: 1px solid #d3d3d3;
-  background-color: #eee;
-  padding: 0px 8px 8px 8px;
+  background-color: white;
+  padding: 0px;
+  margin-top: 15px;
+  opacity: 0.75;
+}
+
+
+#tweets .userPic {
+
+  margin: 8px;
+  width: 70px;
+  height: 70px;
   border-radius: 8px;
 }
 
-#tweets h2 {
-  border-bottom: 1px solid #000;
+#tweets article {
+  border: 1px solid #d3d3d3;
+  padding-top: 0px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+#tweets header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #eee;
+  margin-top: 0px;
+  height: 90px;
+  padding: 0px;
+  border-radius: 8px 8px 0px 0px;
+}
+
+
+#tweets header h2 {
   text-align: left;
+  margin-top: 0px;
+  padding-top: 0.25em;
+  width: 56%;
+  border-bottom: 0px;
+}
+
+#tweets header p {
   margin-top: 8px;
+  margin-right: 8px;
+}
+
+#tweets p {
+  margin-left: 8px;
+  margin-right: 8px;
+
+}
+
+#tweets footer {
+  border-top: 1px solid #d3d3d3;
+}
+
+#tweets:hover {
+  opacity: 1;
 }
