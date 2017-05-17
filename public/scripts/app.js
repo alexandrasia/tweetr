@@ -49,7 +49,7 @@ function createTweetElement(tweet) {
 
 $('form').on('submit', function(event) {
   event.preventDefault();
-  let content = $('textarea').val();
+  var content = $('textarea').val();
   if (content.length === 0) {
     alert("Please include a tweet");
   } else if (content.length > 140) {
@@ -80,6 +80,13 @@ function loadTweets () {
 }
 
 loadTweets();
+
+$('.new-tweet').hide();
+
+$('#compose').on('click', function() {
+  $('.new-tweet').slideToggle();
+  });
+
 
 
 
