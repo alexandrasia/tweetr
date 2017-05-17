@@ -57,6 +57,7 @@ $('form').on('submit', function(event) {
   } else {
     let formData = $(this).serialize();
     createNewTweet(formData);
+    $('textarea').val('');
   }
 });
 
@@ -85,7 +86,9 @@ $('.new-tweet').hide();
 
 $('#compose').on('click', function() {
   $('.new-tweet').slideToggle();
-  });
+  $('textarea').focus();
+});
+
 
 
 
