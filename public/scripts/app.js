@@ -11,7 +11,7 @@ function renderTweets(tweets) {
   $tweetContainer.empty();
   for (var ii = 0; ii < tweets.length; ii++) {
     let tweet = tweets[ii];
-    $tweetContainer.append(createTweetElement(tweet));
+    $tweetContainer.prepend(createTweetElement(tweet));
   }
 }
 
