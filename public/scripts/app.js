@@ -8,7 +8,7 @@
 
 function renderTweets(tweets) {
   var $tweetContainer = $('#tweets');
-
+  $tweetContainer.empty();
   for (var ii = 0; ii < tweets.length; ii++) {
     let tweet = tweets[ii];
     $tweetContainer.append(createTweetElement(tweet));
@@ -62,9 +62,8 @@ $('form').on('submit', function(event) {
 
 function createNewTweet(data) {
   $.ajax({
-    url: '/tweets',
     method: 'POST',
-    dataType: 'json',
+    url: '/tweets',
     data: data,
     success: loadTweets
   });
