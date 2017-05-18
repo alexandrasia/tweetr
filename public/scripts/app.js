@@ -18,7 +18,7 @@ $(document).ready(function() {
         </header>
           <p>${escape(tweet.content.text)}</p>
         <footer>
-          <p>${new Date(tweet.created_at)}</p>
+          <p>${moment(tweet.created_at).startOf('hour').fromNow()}</p>
 
         </footer>
       </article>
