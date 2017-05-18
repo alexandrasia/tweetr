@@ -26,14 +26,15 @@
 }
 
 button {
-  float: right;
-  height: 56px;
-  width: 96px;
-  margin-top: 12px;
   border: 1px solid #000;
   border-radius: 8px;
   background-color: white;
   color: #00a087;
+  float: right;
+  font-size: 110%;
+  height: 56px;
+  width: 96px;
+  margin-top: 12px;
   opacity: 0.9;
 }
 
