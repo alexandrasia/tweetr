@@ -6,10 +6,12 @@ $(document).ready(function () {
     let $counter = $(this).parent().find('.counter');
     $counter.text(length);
 
-    if (length <= 0) {
+    if (length < 0) {
       $counter.addClass(errorClass);
     } else {
       $counter.removeClass(errorClass);
+      // error message slides up
+      $('.error-messages p').slideUp('fast');
     };
   });
 });

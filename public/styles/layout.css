@@ -29,9 +29,8 @@ body {
   padding: 2em;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+
+/* tweets section */
 
 .tweets {
   background-color: white;
@@ -44,15 +43,23 @@ body {
   margin-right: 8px;
 }
 
-.userPic {
+.tweets .icon {
+  max-height: 17px;
+  float: right;
+  margin: 16px 8px 2px 2px;
+  opacity: 0;
+}
+
+.tweets .userPic {
   border-radius: 8px;
-  margin: 8px;
+  margin: 10px 8px 8px 9px;
   height: 70px;
   width: 70px;
 }
 
+/* article */
 article {
-  border: 1px solid #d3d3d3;
+  border: 1px solid #b0b0b0;
   border-radius: 8px;
   margin-bottom: 20px;
   overflow-wrap: break-word;
@@ -64,7 +71,12 @@ article:hover {
   opacity: 1;
 }
 
-header {
+article:hover, article:hover .icon {
+  opacity: 1;
+}
+
+/* article header */
+article header {
   background-color: #eee;
   border-radius: 8px 8px 0px 0px;
   display: flex;
@@ -74,7 +86,7 @@ header {
   padding: 0px;
 }
 
-header h2 {
+article header h2 {
   border-bottom: 0px;
   margin-top: 0px;
   padding-top: 0.25em;
@@ -82,11 +94,14 @@ header h2 {
   width: 56%;
 }
 
-header p {
-  margin-top: 8px;
+article header p {
+  color: #a8a8a8;
+  margin-top: 20px;
   margin-right: 8px;
 }
 
-footer {
+/* article footer */
+article footer {
   border-top: 1px solid #d3d3d3;
 }
+

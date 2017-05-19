@@ -18,6 +18,9 @@ $(document).ready(function() {
         </header>
           <p>${escape(tweet.content.text)}</p>
         <footer>
+          <img src="/images/favorite.png" class="icon">
+          <img src="/images/retweet.png" class="icon">
+          <img src="/images/flag.png" class="icon">
           <p>${moment(tweet.created_at).startOf('hour').fromNow()}</p>
 
         </footer>
@@ -54,7 +57,10 @@ $(document).ready(function() {
       method: 'POST',
       url: '/tweets',
       data: data,
-      success: loadTweets
+      success: function(data) {
+        loadTweets();
+        $('.counter').text('140');
+      }
     });
   }
 
@@ -63,9 +69,11 @@ $(document).ready(function() {
     event.preventDefault();
     var content = $('textarea').val();
     if (content.length === 0) {
-      alert("Please include a tweet");
+      $('#no-tweet').slideDown('fast');
+
     } else if (content.length > 140) {
-      alert("Tweet is too long!");
+      $('#too-long').slideDown('fast');
+
     } else {
       let formData = $(this).serialize();
       createNewTweet(formData);
@@ -76,6 +84,8 @@ $(document).ready(function() {
   loadTweets();
 
   $('.new-tweet').hide();
+  $('#no-tweet').hide();
+  $('#too-long').hide();
 
   // displays and hides (toggles) new tweet box when nav compose button is clicked
   $('#compose').on('click', function() {
@@ -86,9 +96,6 @@ $(document).ready(function() {
     $('body').scrollTop(0);
   });
 
-  $('input').on('click', function() {
-    $('.counter').text(140);
-  });
 });
 
 
