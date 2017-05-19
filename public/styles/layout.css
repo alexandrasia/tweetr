@@ -3,6 +3,7 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
 html {
   box-sizing: border-box;
 }
@@ -29,7 +30,6 @@ body {
   padding: 2em;
 }
 
-
 /* tweets section */
 
 .tweets {
@@ -44,16 +44,16 @@ body {
 }
 
 .tweets .icon {
-  max-height: 17px;
   float: right;
   margin: 16px 8px 2px 2px;
+  max-height: 17px;
   opacity: 0;
 }
 
 .tweets .userPic {
   border-radius: 8px;
-  margin: 10px 8px 8px 9px;
   height: 70px;
+  margin: 10px 8px 8px 9px;
   width: 70px;
 }
 

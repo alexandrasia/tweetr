@@ -22,7 +22,6 @@ $(document).ready(function() {
           <img src="/images/retweet.png" class="icon">
           <img src="/images/flag.png" class="icon">
           <p>${moment(tweet.created_at).startOf('hour').fromNow()}</p>
-
         </footer>
       </article>
     `;
@@ -30,13 +29,12 @@ $(document).ready(function() {
   }
 
   // loops through tweets and calls createTweetElement on them
+  // use prepend so latest tweet is on top
   function renderTweets(tweets) {
     var $tweetContainer = $('.tweets');
-    // removes the previous tweets
     $tweetContainer.empty();
-    for (var ii = 0; ii < tweets.length; ii++) {
-      let tweet = tweets[ii];
-      // use prepend so latest tweet is on top
+    for (var i = 0; i < tweets.length; i++) {
+      var tweet = tweets[i];
       $tweetContainer.prepend(createTweetElement(tweet));
     }
   }
@@ -60,6 +58,7 @@ $(document).ready(function() {
       success: function(data) {
         loadTweets();
         $('.counter').text('140');
+        $('.new-tweet textarea').val('');
       }
     });
   }
@@ -70,35 +69,27 @@ $(document).ready(function() {
     var content = $('textarea').val();
     if (content.length === 0) {
       $('#no-tweet').slideDown('fast');
-
     } else if (content.length > 140) {
       $('#too-long').slideDown('fast');
-
     } else {
-      let formData = $(this).serialize();
+      var formData = $(this).serialize();
       createNewTweet(formData);
-      $('textarea').val('');
     }
   });
 
   loadTweets();
 
+  // hides new tweet box and error messages
   $('.new-tweet').hide();
   $('#no-tweet').hide();
   $('#too-long').hide();
 
   // displays and hides (toggles) new tweet box when nav compose button is clicked
+  // auto-focuses textarea
+  // scrolls to top of page when compose button is clicked
   $('#compose').on('click', function() {
     $('.new-tweet').slideToggle();
-    // auto-focuses textarea
-    $('textarea').focus();
-    // scrolls to top of page when compose button is clicked
+    $('.new-tweet textarea').focus();
     $('body').scrollTop(0);
   });
-
 });
-
-
-
-
-
