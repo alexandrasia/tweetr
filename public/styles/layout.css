@@ -55,6 +55,7 @@ body {
   height: 70px;
   margin: 10px 8px 8px 9px;
   width: 70px;
+  float: left;
 }
 
 /* article */
@@ -79,25 +80,24 @@ article:hover, article:hover .icon {
 article header {
   background-color: #eee;
   border-radius: 8px 8px 0px 0px;
-  display: flex;
   height: 90px;
-  justify-content: space-between;
   margin-top: 0px;
   padding: 0px;
 }
 
 article header h2 {
   border-bottom: 0px;
-  margin-top: 0px;
-  padding-top: 0.25em;
+  margin-top: 9px;
   text-align: left;
-  width: 56%;
+  float: left;
 }
 
 article header p {
   color: #a8a8a8;
-  margin-top: 20px;
+  font-size: 0.9em;
+  margin-top: 17px;
   margin-right: 8px;
+  float: right;
 }
 
 /* article footer */
